@@ -1,0 +1,2 @@
+---
+microsoft_repository__url: 'https://packages.microsoft.com/{{ ansible_distribution | lower }}/{{ ansible_distribution_version }}/prod'

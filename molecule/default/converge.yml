@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: ansible-role-microsoft-repository
+      microsoft_repository__packages:
+        - powershell
