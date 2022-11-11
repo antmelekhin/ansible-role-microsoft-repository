@@ -7,38 +7,20 @@ driver:
 lint: |
   set -e
   yamllint .
+  ansible-lint
 platforms:
-  - name: centos-8
-    image: jrei/systemd-centos:8
+  - name: instance
+    image: '${MOLECULE_DISTRO:-geerlingguy/docker-ubuntu2004-ansible:latest}'
+    command: "${MOLECULE_DOCKER_COMMAND:-'/lib/systemd/systemd'}"
     volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+      - /var/lib/containerd
+    cgroupns_mode: host
     privileged: true
-    command: '/usr/sbin/init'
-  - name: centos-7
-    image: jrei/systemd-centos:7
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    command: '/usr/sbin/init'
-  - name: ubuntu-2004
-    image: jrei/systemd-ubuntu:20.04
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    command: '/lib/systemd/systemd'
-  - name: debian-10
-    image: jrei/systemd-debian:10
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    command: '/lib/systemd/systemd'
-  - name: debian-11
-    image: jrei/systemd-debian:11
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    command: '/lib/systemd/systemd'
+    pre_build_image: true
 provisioner:
   name: ansible
+  playbooks:
+    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
 verifier:
   name: ansible

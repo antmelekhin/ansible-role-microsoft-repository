@@ -1,7 +1,15 @@
 ---
 - name: Converge
   hosts: all
+
+  pre_tasks:
+    - name: 'Update apt cache'
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 600
+      when: ansible_os_family == 'Debian'
+
   roles:
-    - role: ansible-role-microsoft-repository
-      microsoft_repository__packages:
+    - role: antmelekhin.microsoft_repository
+      microsoft_repository_packages:
         - powershell

@@ -4,24 +4,22 @@ galaxy_info:
   role_name: microsoft_repository
   namespace: antmelekhin
   description: An Ansible role for install packages from Microsoft repository.
-  company: HOUSING ECOSYSTEM VTB LLC
 
   license: MIT
 
-  min_ansible_version: 2.7
+  min_ansible_version: '2.9'
 
   platforms:
     - name: EL
       versions:
-        - 7
-        - 8
+        - '7'
+        - '8'
     - name: Ubuntu
       versions:
-        - focal
+        - 'focal'
     - name: Debian
       versions:
-        - 10
-        - 11
+        - 'bullseye'
 
   galaxy_tags:
     - microsoft

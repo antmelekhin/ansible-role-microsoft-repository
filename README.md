@@ -6,16 +6,15 @@ Ansible роль для подключения репозитория `Microsoft
 Требования
 ----------
 
-- Поддерживаемая версия Ansible: 2.7 и выше.
+- Поддерживаемая версия Ansible: 2.9 и выше.
 - Список поддерживаемых платформ описан в файле метаданных роли.
 
 Используемые переменные
 -----------------------
 
-- `microsoft_repository__key_url` Файл публичного GPG ключа (default: `https://packages.microsoft.com/keys/microsoft.asc`).
-- `microsoft_repository__packages` Список пакетов для установки из репозитория `Microsoft` (default: `[]`).
-
-В файлах `vars\*.yml` находится переменная `microsoft_repository__url` с актуальной ссылкой для каждого дистрибутива.
+- `microsoft_repository_url` Ссылка на репозиторий `Microsoft` (default: формируется в `vars/*.yml`).
+- `microsoft_repository_key_url` Файл публичного GPG ключа (default: `https://packages.microsoft.com/keys/microsoft.asc`).
+- `microsoft_repository_packages` Список пакетов для установки из репозитория `Microsoft` (default: `[]`).
 
 Зависимости
 -----------
@@ -47,7 +46,7 @@ Ansible роль для подключения репозитория `Microsoft
 
     roles:
       - role: ansible-role-microsoft-repository
-        microsoft_repository__packages:
+        microsoft_repository_packages:
           - dotnet-sdk-3.1
           - powershell
   ```
@@ -60,4 +59,4 @@ MIT
 Информация об авторе
 --------------------
 
-Мелехин Антон, ООО "ЖИЛИЩНАЯ ЭКОСИСТЕМА ВТБ".
+Мелехин Антон.

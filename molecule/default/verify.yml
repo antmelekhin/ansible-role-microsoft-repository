@@ -2,13 +2,14 @@
 - name: 'Verify'
   hosts: all
   gather_facts: false
+
   tasks:
     - name: 'Check current Powershell version'
       ansible.builtin.command:
         cmd: pwsh --version
       changed_when: false
-      register: powershell_version_check
+      register: _powershell_version_check
 
     - name: 'Version output'
       ansible.builtin.debug:
-        var: powershell_version_check.stdout
+        var: _powershell_version_check.stdout

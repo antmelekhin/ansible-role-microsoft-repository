@@ -1,19 +1,19 @@
 ---
 - name: 'Add Microsoft DNF/YUM key'
   ansible.builtin.rpm_key:
-    key: '{{ microsoft_repository__key_url }}'
+    key: '{{ microsoft_repository_key_url }}'
     state: present
 
 - name: 'Add Microsoft DNF/YUM repository'
   ansible.builtin.yum_repository:
     name: 'packages-microsoft-prod'
     description: 'Microsoft repository'
-    baseurl: '{{ microsoft_repository__url }}'
+    baseurl: '{{ microsoft_repository_url }}'
     file: 'microsoft-prod'
     gpgcheck: true
     enabled: true
 
 - name: 'Install DNF/YUM packages'
   ansible.builtin.package:
-    name: '{{ microsoft_repository__packages }}'
+    name: '{{ microsoft_repository_packages }}'
     state: present
