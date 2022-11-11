@@ -1,23 +1,28 @@
 ---
-- name: 'Ensure dependencies are installed'
-  ansible.builtin.apt:
-    name:
-      - apt-transport-https
-      - gnupg
-    state: present
+- name: 'Configure APT repository and install packages'
+  block:
+    - name: 'Ensure dependencies are installed'
+      ansible.builtin.apt:
+        name:
+          - apt-transport-https
+          - gnupg
+        state: present
 
-- name: 'Add Microsoft APT key'
-  ansible.builtin.apt_key:
-    url: '{{ microsoft_repository_key_url }}'
-    state: present
+    - name: 'Add Microsoft APT key'
+      ansible.builtin.apt_key:
+        url: '{{ microsoft_repository_key_url }}'
+        state: present
+      when: not ansible_check_mode
 
-- name: 'Add Microsoft APT repository'
-  ansible.builtin.apt_repository:
-    repo: 'deb [arch=amd64] {{ microsoft_repository_url }} {{ ansible_distribution_release }} main'
-    filename: 'microsoft-prod'
-    state: present
+    - name: 'Add Microsoft APT repository'
+      ansible.builtin.apt_repository:
+        repo: 'deb [arch=amd64] {{ microsoft_repository_url }} {{ ansible_distribution_release }} main'
+        filename: 'microsoft-prod'
+        state: present
 
-- name: 'Install APT packages'
-  ansible.builtin.apt:
-    name: '{{ microsoft_repository_packages }}'
-    state: present
+    - name: 'Install APT packages'
+      ansible.builtin.apt:
+        name: '{{ microsoft_repository_packages }}'
+        state: present
+      when: not ansible_check_mode
+  become: true
