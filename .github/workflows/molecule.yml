@@ -14,11 +14,11 @@ jobs:
     strategy:
       matrix:
         include:
-          - distro: 'geerlingguy/docker-rockylinux8-ansible:latest'
+          - distro: 'rockylinux8'
             command: '/usr/sbin/init'
-          - distro: 'geerlingguy/docker-ubuntu2004-ansible:latest'
+          - distro: 'ubuntu2004'
             command: '/lib/systemd/systemd'
-          - distro: 'geerlingguy/docker-debian11-ansible:latest'
+          - distro: 'debian11'
             command: '/lib/systemd/systemd'
 
     steps:
