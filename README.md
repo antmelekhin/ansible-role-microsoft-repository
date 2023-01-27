@@ -1,30 +1,30 @@
 Microsoft Repository
 ====================
 
-Ansible роль для подключения репозитория `Microsoft` и установки из него пакетов.
+An Ansible role for add `Microsoft` repository on Linux distros and install packages from it.
 
-Требования
-----------
+Requirements
+------------
 
-- Поддерживаемая версия Ansible: 2.9 и выше.
-- Список поддерживаемых платформ описан в файле метаданных роли.
+- Supported version of Ansible: 2.9 and highter.
+- List of all supported platforms described in role meta.
 
-Используемые переменные
------------------------
+Role Variables
+--------------
 
-- `microsoft_repository_url` Ссылка на репозиторий `Microsoft` (default: формируется в `vars/*.yml`).
-- `microsoft_repository_key_url` Файл публичного GPG ключа (default: `https://packages.microsoft.com/keys/microsoft.asc`).
-- `microsoft_repository_packages` Список пакетов для установки из репозитория `Microsoft` (default: `[]`).
+- `microsoft_repository_url` URL to `Microsoft` repository (default: define in `vars/*.yml`).
+- `microsoft_repository_key_url` URL to `Microsoft's` GPG public key file (default: `https://packages.microsoft.com/keys/microsoft.asc`).
+- `microsoft_repository_packages` List of packages you want to install (default: `[]`).
 
-Зависимости
------------
+Dependencies
+------------
 
-Отсутствуют.
+None.
 
-Пример использования
---------------------
+Example Playbook
+----------------
 
-- Подключаем репозиторий `Microsoft`:
+- Add `Microsoft` repository:
 
   ```yaml
   ---
@@ -36,7 +36,7 @@ Ansible роль для подключения репозитория `Microsoft
       - role: ansible-role-microsoft-repository
   ```
 
-- Подключаем репозиторий `Microsoft` и устанавливаем пакет SDK версии 3.1 и Powershell:
+- Add `Microsoft` repository, install SDK 3.1 and Powershell:
 
   ```yaml
   ---
@@ -51,12 +51,12 @@ Ansible роль для подключения репозитория `Microsoft
           - powershell
   ```
 
-Лицензия
---------
+License
+-------
 
 MIT
 
-Информация об авторе
---------------------
+Author Information
+------------------
 
-Мелехин Антон.
+Melekhin Anton.

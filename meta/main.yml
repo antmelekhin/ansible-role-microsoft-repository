@@ -3,7 +3,7 @@ galaxy_info:
   author: Melekhin Anton
   role_name: microsoft_repository
   namespace: antmelekhin
-  description: An Ansible role for install packages from Microsoft repository.
+  description: An Ansible role for add Microsoft repository on Linux distros and install packages from it.
 
   license: MIT
 
