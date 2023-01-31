@@ -33,7 +33,7 @@ Example Playbook
     hosts: all
 
     roles:
-      - role: ansible-role-microsoft-repository
+      - role: antmelekhin.microsoft_repository
   ```
 
 - Add `Microsoft` repository, install SDK 3.1 and Powershell:
@@ -45,7 +45,7 @@ Example Playbook
     hosts: all
 
     roles:
-      - role: ansible-role-microsoft-repository
+      - role: antmelekhin.microsoft_repository
         microsoft_repository_packages:
           - dotnet-sdk-3.1
           - powershell
