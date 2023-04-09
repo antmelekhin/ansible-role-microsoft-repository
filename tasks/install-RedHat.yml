@@ -1,5 +1,6 @@
 ---
 - name: 'Configure DNF/YUM repository and install packages'
+  become: true
   block:
     - name: 'Add Microsoft DNF/YUM key'
       ansible.builtin.rpm_key:
@@ -20,4 +21,3 @@
         name: '{{ microsoft_repository_packages }}'
         state: present
       when: not ansible_check_mode
-  become: true
