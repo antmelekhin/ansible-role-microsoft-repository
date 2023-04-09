@@ -11,7 +11,6 @@ Requirements
   - RHEL
     - 7
     - 8
-    - 9
   - Ubuntu
     - 20.04
     - 22.04

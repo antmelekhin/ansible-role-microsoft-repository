@@ -15,8 +15,6 @@ jobs:
         include:
           - distro: 'rockylinux-8'
             command: '/usr/sbin/init'
-          - distro: 'rockylinux-9'
-            command: '/usr/sbin/init'
           - distro: 'ubuntu-20.04'
             command: '/lib/systemd/systemd'
           - distro: 'ubuntu-22.04'
