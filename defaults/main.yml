@@ -1,4 +1,9 @@
 ---
-microsoft_repository_url: '{{ _microsoft_repository_url }}'
+microsoft_repository_mirror: 'https://packages.microsoft.com'
 microsoft_repository_key_url: 'https://packages.microsoft.com/keys/microsoft.asc'
+
+microsoft_repository_dirs_list:
+  - name: prod
+    state: present
+
 microsoft_repository_packages: []
