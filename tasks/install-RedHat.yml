@@ -9,12 +9,24 @@
 
     - name: 'Add Microsoft DNF/YUM repository'
       ansible.builtin.yum_repository:
-        name: 'packages-microsoft-prod'
-        description: 'Microsoft repository'
-        baseurl: '{{ microsoft_repository_url }}'
-        file: 'microsoft-prod'
+        name: 'packages-microsoft-com-{{ microsoft_repository_dir.name }}'
+        description: 'packages-microsoft-com-{{ microsoft_repository_dir.name }}'
+        baseurl: '{{ _microsoft_repository_url }}'
+        file: '{{ microsoft_repository_dir.filename | default("packages-microsoft-com") }}'
         gpgcheck: true
         enabled: true
+        gpgkey: '{{ microsoft_repository_key_url }}'
+        state: '{{ microsoft_repository_dir.state | default(omit) }}'
+      loop: '{{ microsoft_repository_dirs_list }}'
+      loop_control:
+        loop_var: microsoft_repository_dir
+      vars:
+        _microsoft_repository_url: >-
+          {% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternate' -%}
+            {{ microsoft_repository_mirror }}/yumrepos/{{ microsoft_repository_dir.name }}
+          {%- else -%}
+            {{ _microsoft_repository_baseurl }}/{{ microsoft_repository_dir.name }}
+          {%- endif %}
 
     - name: 'Install DNF/YUM packages'
       ansible.builtin.package:

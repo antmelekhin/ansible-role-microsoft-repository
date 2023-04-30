@@ -1,2 +1,2 @@
 ---
-_microsoft_repository_url: 'https://packages.microsoft.com/{{ ansible_distribution | lower }}/{{ ansible_distribution_version }}/prod'
+_microsoft_repository_baseurl: '{{ microsoft_repository_mirror }}/{{ ansible_distribution | lower }}/{{ ansible_distribution_version }}'

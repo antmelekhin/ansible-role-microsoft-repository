@@ -17,9 +17,19 @@
 
     - name: 'Add Microsoft APT repository'
       ansible.builtin.apt_repository:
-        repo: 'deb [arch=amd64] {{ microsoft_repository_url }} {{ ansible_distribution_release }} main'
-        filename: 'microsoft-prod'
-        state: present
+        repo: 'deb [arch=amd64] {{ _microsoft_repository_url }} {{ ansible_distribution_release }} main'
+        filename: '{{ microsoft_repository_dir.filename | default("packages-microsoft-com") }}'
+        state: '{{ microsoft_repository_dir.state | default(omit) }}'
+      loop: '{{ microsoft_repository_dirs_list }}'
+      loop_control:
+        loop_var: microsoft_repository_dir
+      vars:
+        _microsoft_repository_url: >-
+          {% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternate' -%}
+            {{ microsoft_repository_mirror }}/repos/{{ microsoft_repository_dir.name }}
+          {%- else -%}
+            {{ _microsoft_repository_baseurl }}/{{ microsoft_repository_dir.name }}
+          {%- endif %}
 
     - name: 'Install APT packages'
       ansible.builtin.apt:
