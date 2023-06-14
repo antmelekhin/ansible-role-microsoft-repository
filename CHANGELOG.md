@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.1](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.0...1.2.1) (2023-06-14)
+
+
+### Fixes
+
+* improve the task key order ([7950372](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/79503723f9d59f26c5eb5e8d1769c2432ce10f42))
+
+
+### Tests
+
+* update `molecule` scenario and workflow ([2d0d361](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/2d0d3613092305b2af21bb98a999caa58f13a7a9))
+
 # [1.2.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.1.1...v1.2.0) (2023-04-30)
 
 
