@@ -17,9 +17,6 @@
         enabled: true
         gpgkey: '{{ microsoft_repository_key_url }}'
         state: '{{ microsoft_repository_dir.state | default(omit) }}'
-      loop: '{{ microsoft_repository_dirs_list }}'
-      loop_control:
-        loop_var: microsoft_repository_dir
       vars:
         _microsoft_repository_url: >-
           {% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternate' -%}
@@ -27,6 +24,9 @@
           {%- else -%}
             {{ _microsoft_repository_baseurl }}/{{ microsoft_repository_dir.name }}
           {%- endif %}
+      loop: '{{ microsoft_repository_dirs_list }}'
+      loop_control:
+        loop_var: microsoft_repository_dir
 
     - name: 'Install DNF/YUM packages'
       ansible.builtin.package:
