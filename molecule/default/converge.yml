@@ -11,5 +11,11 @@
 
   roles:
     - role: antmelekhin.microsoft_repository
+      microsoft_repository_dirs_list:
+        - name: prod
+          state: present
+        - name: azure-cli
+          type: alternate
       microsoft_repository_packages:
         - powershell
+        - azure-cli

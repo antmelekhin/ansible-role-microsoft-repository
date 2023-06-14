@@ -10,6 +10,16 @@
       changed_when: false
       register: _powershell_version_check
 
-    - name: 'Version output'
+    - name: 'Check current AzureCLI version'
+      ansible.builtin.shell:
+        cmd: az --version | grep azure-cli
+      changed_when: false
+      register: _azurecli_version_check
+
+    - name: 'Powershell version output'
       ansible.builtin.debug:
         var: _powershell_version_check.stdout
+
+    - name: 'AzureCLI version output'
+      ansible.builtin.debug:
+        var: _azurecli_version_check.stdout

@@ -13,16 +13,11 @@ jobs:
     strategy:
       matrix:
         include:
-          - distro: 'rockylinux-8'
-            command: '/usr/sbin/init'
-          - distro: 'ubuntu-20.04'
-            command: '/lib/systemd/systemd'
-          - distro: 'ubuntu-22.04'
-            command: '/lib/systemd/systemd'
           - distro: 'debian-10'
-            command: '/lib/systemd/systemd'
           - distro: 'debian-11'
-            command: '/lib/systemd/systemd'
+          - distro: 'rockylinux-8'
+          - distro: 'ubuntu-20.04'
+          - distro: 'ubuntu-22.04'
 
     steps:
       - name: 'Checkout the codebase'
@@ -36,4 +31,3 @@ jobs:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
           MOLECULE_DISTRO: ${{ matrix.distro }}
-          MOLECULE_DOCKER_COMMAND: ${{ matrix.command }}
