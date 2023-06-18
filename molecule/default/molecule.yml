@@ -10,7 +10,7 @@ lint: |
   ansible-lint
 platforms:
   - name: instance
-    image: 'antmelekhin/docker-systemd:${MOLECULE_DISTRO:-ubuntu-20.04}'
+    image: 'antmelekhin/docker-systemd:${MOLECULE_DISTRO:-ubuntu-22.04}'
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
       - /var/lib/containerd
@@ -19,7 +19,5 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
-  playbooks:
-    converge: '${MOLECULE_PLAYBOOK:-converge.yml}'
 verifier:
   name: ansible

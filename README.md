@@ -8,15 +8,15 @@ Requirements
 
 - Supported version of Ansible: 2.9 and highter.
 - Supported platforms:
+  - Debian
+    - 10
+    - 11
   - RHEL
     - 7
     - 8
   - Ubuntu
     - 20.04
     - 22.04
-  - Debian
-    - 10
-    - 11
 
 Role Variables
 --------------

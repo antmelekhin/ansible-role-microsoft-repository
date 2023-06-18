@@ -10,6 +10,10 @@ galaxy_info:
   min_ansible_version: '2.9'
 
   platforms:
+    - name: Debian
+      versions:
+        - 'buster'
+        - 'bullseye'
     - name: EL
       versions:
         - '7'
@@ -18,10 +22,6 @@ galaxy_info:
       versions:
         - 'focal'
         - 'jammy'
-    - name: Debian
-      versions:
-        - 'buster'
-        - 'bullseye'
 
   galaxy_tags:
     - microsoft
