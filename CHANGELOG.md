@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.3](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.2...v1.2.3) (2023-07-24)
+
+
+### Continuous Integration
+
+* add release type `improv` ([9a0137a](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/9a0137a55fe71081d2d87c518a3e59c7669aa59c))
+* rm `tagFormat` option, update `commit-analyzer` and `release-notes-generator` blocks ([9e9319b](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/9e9319bc96486ccb6ce3d4e7d54205adafd45a01))
+
+
+### Fixes
+
+* change `*_repository` modules to `template` in `Add Microsoft Repository` tasks ([0b166b6](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/0b166b6a782e09aa3686985398cb34ea45fee047))
+
 ## [1.2.2](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/1.2.1...1.2.2) (2023-06-14)
 
 
