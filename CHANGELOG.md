@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.3...v1.2.4) (2023-07-24)
+
+
+### Fixes
+
+* update `_microsoft_repository_baseurl` variable for Debian ([6d034fa](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/6d034faec7914eacb11e8ec176657f1bb03e13aa))
+
 ## [1.2.3](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.2...v1.2.3) (2023-07-24)
 
 
