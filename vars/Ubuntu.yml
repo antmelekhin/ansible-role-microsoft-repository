@@ -1,0 +1,2 @@
+---
+_microsoft_repository_baseurl: '{{ microsoft_repository_mirror }}/{{ ansible_distribution | lower }}/{{ ansible_distribution_version }}'
