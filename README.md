@@ -27,9 +27,7 @@ Role Variables
 
   Available values:
   - `name` prod (default)
-  - `state` present (default)
   - `type` ommited by default (see the example with the 'azure-cli' install).
-  - `filename` packages-microsoft-com (default)
 
 - `microsoft_repository_packages` List of packages you want to install (default: `[]`).
 
