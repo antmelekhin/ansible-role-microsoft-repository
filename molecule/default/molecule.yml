@@ -9,8 +9,8 @@ lint: |
   yamllint .
   ansible-lint
 platforms:
-  - name: instance
-    image: 'antmelekhin/docker-systemd:${MOLECULE_DISTRO:-ubuntu-22.04}'
+  - name: '${IMAGE:-docker-systemd}-${TAG:-ubuntu-22.04}-${TOX_ENVNAME}'
+    image: '${NAMESPACE:-antmelekhin}/${IMAGE:-docker-systemd}:${TAG:-ubuntu-22.04}'
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
       - /var/lib/containerd
