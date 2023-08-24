@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.2.5](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.4...v1.2.5) (2023-08-24)
+
+
+### Continuous Integration
+
+* revert distro matrix ([ee396fb](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/ee396fb0b40a40625121aa7569407cf279a14bc5))
+
+
+### Fixes
+
+* add `update_cahce` in debian task for fix idempotence ([18f3f26](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/18f3f26829469f8bf1d4e9ff4c779f426f53ee62))
+
+
+### Tests
+
+* add tox ([0e5809c](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/0e5809c7d70aabadbd35518d041ada2b79d9bbce))
+* fix molecule container name ([a5704ef](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/a5704efb70a613319cc3070931d13a32323de925))
+
 ## [1.2.4](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.3...v1.2.4) (2023-07-24)
 
 
