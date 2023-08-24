@@ -2,24 +2,15 @@
 
 ## [1.2.5](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.4...v1.2.5) (2023-08-24)
 
-
-### Continuous Integration
-
-* revert distro matrix ([ee396fb](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/ee396fb0b40a40625121aa7569407cf279a14bc5))
-
-
 ### Fixes
 
 * add `update_cahce` in debian task for fix idempotence ([18f3f26](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/18f3f26829469f8bf1d4e9ff4c779f426f53ee62))
 
-
 ### Tests
 
 * add tox ([0e5809c](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/0e5809c7d70aabadbd35518d041ada2b79d9bbce))
-* fix molecule container name ([a5704ef](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/a5704efb70a613319cc3070931d13a32323de925))
 
 ## [1.2.4](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.3...v1.2.4) (2023-07-24)
-
 
 ### Fixes
 
@@ -27,12 +18,10 @@
 
 ## [1.2.3](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.2...v1.2.3) (2023-07-24)
 
-
 ### Continuous Integration
 
 * add release type `improv` ([9a0137a](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/9a0137a55fe71081d2d87c518a3e59c7669aa59c))
 * rm `tagFormat` option, update `commit-analyzer` and `release-notes-generator` blocks ([9e9319b](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/9e9319bc96486ccb6ce3d4e7d54205adafd45a01))
-
 
 ### Fixes
 
@@ -40,25 +29,21 @@
 
 ## [1.2.2](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/1.2.1...1.2.2) (2023-06-14)
 
-
 ### Fixes
 
 * **test:** replace `shell` to `command` module in verify step ([6cc16a4](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/6cc16a425c6c8822b1d8c5d362c60a140f924532))
 
 ## [1.2.1](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.0...1.2.1) (2023-06-14)
 
-
 ### Fixes
 
 * improve the task key order ([7950372](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/79503723f9d59f26c5eb5e8d1769c2432ce10f42))
-
 
 ### Tests
 
 * update `molecule` scenario and workflow ([2d0d361](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/2d0d3613092305b2af21bb98a999caa58f13a7a9))
 
 # [1.2.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.1.1...v1.2.0) (2023-04-30)
-
 
 ### Features
 
