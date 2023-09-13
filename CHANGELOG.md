@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.5...v1.2.6) (2023-09-13)
+
+
+### Fixes
+
+* add missing arch in apt repo list ([#10](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/10)) ([1acdf90](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/1acdf903a7f56d102643336f77857997c7b739e0))
+
 ## [1.2.5](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.4...v1.2.5) (2023-08-24)
 
 ### Fixes
