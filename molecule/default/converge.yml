@@ -6,7 +6,7 @@
       microsoft_repository_dirs_list:
         - name: prod
         - name: azure-cli
-          type: alternate
+          type: alternative
       microsoft_repository_packages:
         - powershell
         - azure-cli
