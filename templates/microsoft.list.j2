@@ -1,5 +1,4 @@
 {{ ansible_managed | comment }}
-
 {% for microsoft_repository_dir in microsoft_repository_dirs_list %}
 {% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternative' %}
 deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] {{ _microsoft_repository_alternative_mirror_url }}/{{ microsoft_repository_dir.name }} {{ ansible_distribution_release }} main

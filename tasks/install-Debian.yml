@@ -1,5 +1,5 @@
 ---
-- name: 'Configure APT repository and install packages'
+- name: 'Configure APT repository and install Microsoft packages'
   become: true
   block:
     - name: 'Ensure dependencies are installed'
@@ -25,7 +25,7 @@
         group: 'root'
         mode: 0644
 
-    - name: 'Install APT packages'
+    - name: 'Install Microsoft APT packages'
       ansible.builtin.apt:
         name: '{{ microsoft_repository_packages }}'
         update_cache: true

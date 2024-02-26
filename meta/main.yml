@@ -2,7 +2,7 @@
 galaxy_info:
   author: antmelekhin
   role_name: microsoft_repository
-  description: An Ansible role for add Microsoft repository on Linux distros and install packages from it.
+  description: An Ansible role to add Microsoft repository on Linux distros and install packages from it.
 
   license: MIT
 

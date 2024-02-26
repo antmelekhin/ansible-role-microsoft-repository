@@ -1,5 +1,5 @@
 ---
-- name: 'Include OS-specific variables'
+- name: 'Include OS-specific Microsoft variables'
   ansible.builtin.include_vars: '{{ distribution }}'
   with_first_found:
     - '{{ ansible_distribution }}.yml'
@@ -7,5 +7,5 @@
   loop_control:
     loop_var: distribution
 
-- name: 'Include OS-specific tasks for install packages'
+- name: 'Include OS-specific tasks to install Microsoft packages'
   ansible.builtin.include_tasks: 'install-{{ ansible_os_family }}.yml'

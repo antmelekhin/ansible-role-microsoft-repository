@@ -1,5 +1,5 @@
 ---
-- name: 'Configure DNF/YUM repository and install packages'
+- name: 'Configure DNF/YUM repository and install Microsoft packages'
   become: true
   block:
     - name: 'Add Microsoft DNF/YUM repository'
@@ -10,7 +10,7 @@
         group: 'root'
         mode: 0644
 
-    - name: 'Install DNF/YUM packages'
+    - name: 'Install Microsoft DNF/YUM packages'
       ansible.builtin.package:
         name: '{{ microsoft_repository_packages }}'
         state: present
