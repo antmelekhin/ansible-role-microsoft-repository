@@ -1,5 +1,4 @@
 {{ ansible_managed | comment }}
-
 {% for microsoft_repository_dir in microsoft_repository_dirs_list %}
 [packages-microsoft-com-{{ microsoft_repository_dir.name }}]
 {% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternate' %}
