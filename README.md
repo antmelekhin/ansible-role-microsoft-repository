@@ -1,7 +1,7 @@
 Microsoft Repository
 ====================
 
-An Ansible role for add `Microsoft` repository on Linux distros and install packages from it.
+An Ansible role to add `Microsoft` repository on Linux distros and install packages from it.
 
 Requirements
 ------------
@@ -43,7 +43,6 @@ Example Playbook
 
   ```yaml
   ---
-
   - name: 'Setup Microsoft repository'
     hosts: all
 
@@ -55,7 +54,6 @@ Example Playbook
 
   ```yaml
   ---
-
   - name: 'Setup Microsoft repository'
     hosts: all
 
@@ -70,7 +68,6 @@ Example Playbook
 
   ```yaml
   ---
-
   - name: 'Setup Microsoft repository'
     hosts: all
 
