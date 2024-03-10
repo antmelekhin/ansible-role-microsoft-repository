@@ -2,14 +2,14 @@
 
 {% for microsoft_repository_dir in microsoft_repository_dirs_list %}
 [packages-microsoft-com-{{ microsoft_repository_dir.name }}]
-{% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternate' %}
-baseurl = {{ microsoft_repository_mirror }}/yumrepos/{{ microsoft_repository_dir.name }}
+{% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternative' %}
+baseurl = {{ _microsoft_repository_alternative_mirror_url }}/{{ microsoft_repository_dir.name }}
 {% else %}
-baseurl = {{ _microsoft_repository_baseurl }}/{{ microsoft_repository_dir.name }}
+baseurl = {{ _microsoft_repository_base_mirror_url }}/{{ microsoft_repository_dir.name }}
 {% endif %}
 enabled = 1
 gpgcheck = 1
-gpgkey = {{ microsoft_repository_key_url }}
+gpgkey = {{ microsoft_repository_gpgkey }}
 name = packages-microsoft-com-{{ microsoft_repository_dir.name }}
 
 {% endfor %}

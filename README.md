@@ -21,8 +21,8 @@ Requirements
 Role Variables
 --------------
 
-- `microsoft_repository_mirror` Mirror of `Microsoft` repository (default: `https://packages.microsoft.com`).
-- `microsoft_repository_key_url` URL to `Microsoft's` GPG public key file (default: `https://packages.microsoft.com/keys/microsoft.asc`).
+- `microsoft_repository_mirror_url` Mirror of `Microsoft` repository (default: `https://packages.microsoft.com`).
+- `microsoft_repository_gpgkey` URL to `Microsoft's` GPG public key file (default: `https://packages.microsoft.com/keys/microsoft.asc`).
 - `microsoft_repository_dirs_list` List of repository directories. See [repository structure](https://packages.microsoft.com/).
 
   Available values:
@@ -75,7 +75,7 @@ Example Playbook
       - role: antmelekhin.microsoft_repository
         microsoft_repository_dirs_list:
           - name: azure-cli
-            type: alternate
+            type: alternative
         microsoft_repository_packages:
           - azure-cli
   ```

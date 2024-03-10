@@ -12,7 +12,8 @@
 
     - name: 'Add Microsoft APT key'
       ansible.builtin.apt_key:
-        url: '{{ microsoft_repository_key_url }}'
+        url: '{{ microsoft_repository_gpgkey }}'
+        keyring: '/usr/share/keyrings/microsoft-archive-keyring.gpg'
         state: present
       when: not ansible_check_mode
 
