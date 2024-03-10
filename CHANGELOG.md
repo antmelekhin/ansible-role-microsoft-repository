@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.6...v1.3.0) (2024-03-10)
+
+
+### Continuous Integration
+
+* fix publish workflow ([ea64756](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/ea64756c19d98cc82f3470ac7d5b501f6609cf87))
+
+
+### Improvements
+
+* update variable names and add other changes ([#12](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/12)) ([21cad76](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/21cad7680b4dab1417df6beed10a6ccb3ca0a8c4))
+
+
+### Styles
+
+* minor fixes ([#13](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/13)) ([f0261e7](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/f0261e7d50e3b97ff862825e38fbec485cb8472c))
+* revert empty line after ansible comment ([860d44b](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/860d44b4fd72d36e74df11694798f56c249ae3a6))
+
 ## [1.2.6](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.5...v1.2.6) (2023-09-13)
 
 
