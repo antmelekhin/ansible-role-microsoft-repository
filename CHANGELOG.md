@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.1](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.0...v1.3.1) (2024-04-17)
+
+
+### Continuous Integration
+
+* update release rules ([56e97e1](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/56e97e148bdae2caabffa153a2175bfc9ba52157))
+* update workflows ([de1bc91](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/de1bc910f730b4d881f706ffe798ba03473cd574))
+
+
+### Documentation
+
+* **README:** update supported platforms in README and meta ([8f7af45](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/8f7af4590f2048aa37478d88571d284434a3f593))
+
+
+### Styles
+
+* add `_microsoft_repository_local_gpgkey` variable and merge debian/ubuntu vars files ([#14](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/14)) ([f3b74a5](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/f3b74a5a55a19ede48e50a27362dc4515dad2034))
+
 ## [1.3.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.2.6...v1.3.0) (2024-03-10)
 
 
