@@ -5,8 +5,8 @@
     - name: 'Ensure dependencies are installed'
       ansible.builtin.apt:
         name:
-          - apt-transport-https
-          - gnupg
+          - 'apt-transport-https'
+          - 'gnupg'
         update_cache: true
         state: present
 
@@ -14,7 +14,7 @@
       ansible.builtin.apt_key:
         url: '{{ microsoft_repository_gpgkey_url }}'
         keyring: '{{ _microsoft_repository_local_gpgkey_path }}'
-        state: present
+        state: 'present'
       when: not ansible_check_mode
 
     - name: 'Add Microsoft APT repository'
@@ -29,5 +29,5 @@
       ansible.builtin.apt:
         name: '{{ microsoft_repository_packages }}'
         update_cache: true
-        state: present
+        state: 'present'
       when: not ansible_check_mode
