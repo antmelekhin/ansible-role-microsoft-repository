@@ -9,7 +9,7 @@ baseurl = {{ _microsoft_repository_base_mirror_url }}/{{ microsoft_repository_di
 {% endif %}
 enabled = 1
 gpgcheck = 1
-gpgkey = {{ microsoft_repository_gpgkey }}
+gpgkey = {{ microsoft_repository_gpgkey_url }}
 name = packages-microsoft-com-{{ microsoft_repository_dir.name }}
 
 {% endfor %}

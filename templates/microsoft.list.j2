@@ -2,8 +2,8 @@
 
 {% for microsoft_repository_dir in microsoft_repository_dirs_list %}
 {% if microsoft_repository_dir.type is defined and microsoft_repository_dir.type == 'alternative' %}
-deb [arch=amd64,arm64,armhf signed-by={{ _microsoft_repository_local_gpgkey }}] {{ _microsoft_repository_alternative_mirror_url }}/{{ microsoft_repository_dir.name }} {{ ansible_distribution_release }} main
+deb [arch=amd64,arm64,armhf signed-by={{ _microsoft_repository_local_gpgkey_path }}] {{ _microsoft_repository_alternative_mirror_url }}/{{ microsoft_repository_dir.name }} {{ ansible_distribution_release }} main
 {% else %}
-deb [arch=amd64,arm64,armhf signed-by={{ _microsoft_repository_local_gpgkey }}] {{ _microsoft_repository_base_mirror_url }}/{{ microsoft_repository_dir.name }} {{ ansible_distribution_release }} main
+deb [arch=amd64,arm64,armhf signed-by={{ _microsoft_repository_local_gpgkey_path }}] {{ _microsoft_repository_base_mirror_url }}/{{ microsoft_repository_dir.name }} {{ ansible_distribution_release }} main
 {% endif %}
 {% endfor %}

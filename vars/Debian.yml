@@ -1,5 +1,5 @@
 ---
-_microsoft_repository_local_gpgkey: '/usr/share/keyrings/microsoft-archive-keyring.gpg'
+_microsoft_repository_local_gpgkey_path: '/usr/share/keyrings/microsoft-archive-keyring.gpg'
 
 _microsoft_repository_distribution_version: "{{ (ansible_distribution == 'Ubuntu') | ternary(ansible_distribution_version, ansible_distribution_major_version) }}"
 _microsoft_repository_base_mirror_url: '{{ microsoft_repository_mirror_url }}/{{ ansible_distribution | lower }}/{{ _microsoft_repository_distribution_version }}'

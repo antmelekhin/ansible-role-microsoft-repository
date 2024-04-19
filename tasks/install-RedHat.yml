@@ -2,6 +2,11 @@
 - name: 'Configure DNF/YUM repository and install Microsoft packages'
   become: true
   block:
+    - name: 'Ensure dependencies are installed'
+      ansible.builtin.package:
+        name: 'yum-utils'
+        state: 'present'
+
     - name: 'Add Microsoft DNF/YUM repository'
       ansible.builtin.template:
         src: 'microsoft.repo.j2'
@@ -13,5 +18,5 @@
     - name: 'Install Microsoft DNF/YUM packages'
       ansible.builtin.package:
         name: '{{ microsoft_repository_packages }}'
-        state: present
+        state: 'present'
       when: not ansible_check_mode
