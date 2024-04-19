@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.1...v1.3.2) (2024-04-19)
+
+
+### Code Refactoring
+
+* update variable names, quote strings and rm loop for include_vars ([#15](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/15)) ([c7c209c](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/c7c209c0f6c14acf05a3939f8646ebfb995f3531))
+
 ## [1.3.1](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.0...v1.3.1) (2024-04-17)
 
 
