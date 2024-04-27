@@ -41,46 +41,46 @@ None.
 Example Playbook
 ----------------
 
-- Add the `Microsoft Prod` repository:
+Add the `Microsoft Prod` repository:
 
-  ```yaml
-  ---
-  - name: 'Setup Microsoft repository'
-    hosts: all
+```yaml
+---
+- name: 'Setup Microsoft repository'
+  hosts: all
 
-    roles:
-      - role: antmelekhin.microsoft_repository
-  ```
+  roles:
+    - role: antmelekhin.microsoft_repository
+```
 
-- Add the `Microsoft Prod` repository and install `dotnet-sdk-3.1` and `powershell` packages:
+Add the `Microsoft Prod` repository and install `dotnet-sdk-3.1` and `powershell` packages:
 
-  ```yaml
-  ---
-  - name: 'Setup Microsoft repository'
-    hosts: all
+```yaml
+---
+- name: 'Setup Microsoft repository'
+  hosts: all
 
-    roles:
-      - role: antmelekhin.microsoft_repository
-        microsoft_repository_packages:
-          - dotnet-sdk-3.1
-          - powershell
-  ```
+  roles:
+    - role: antmelekhin.microsoft_repository
+      microsoft_repository_packages:
+        - dotnet-sdk-3.1
+        - powershell
+```
 
-- Add the `Microsoft Azure CLI` repository and install the azure-cli package:
+Add the `Microsoft Azure CLI` repository and install the azure-cli package:
 
-  ```yaml
-  ---
-  - name: 'Setup Microsoft repository'
-    hosts: all
+```yaml
+---
+- name: 'Setup Microsoft repository'
+  hosts: all
 
-    roles:
-      - role: antmelekhin.microsoft_repository
-        microsoft_repository_dirs_list:
-          - name: azure-cli
-            type: alternative
-        microsoft_repository_packages:
-          - azure-cli
-  ```
+  roles:
+    - role: antmelekhin.microsoft_repository
+      microsoft_repository_dirs_list:
+        - name: azure-cli
+          type: alternative
+      microsoft_repository_packages:
+        - azure-cli
+```
 
 License
 -------
