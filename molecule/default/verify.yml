@@ -6,20 +6,20 @@
   tasks:
     - name: 'Check current Powershell version'
       ansible.builtin.command:
-        cmd: pwsh --version
+        cmd: 'pwsh --version'
       changed_when: false
-      register: _powershell_version_check
+      register: __powershell_version_check
 
     - name: 'Check current AzureCLI version'
       ansible.builtin.command:
-        cmd: az version
+        cmd: 'az version'
       changed_when: false
-      register: _azurecli_version_check
+      register: __azurecli_version_check
 
     - name: 'Powershell version output'
       ansible.builtin.debug:
-        msg: '{{ _powershell_version_check.stdout }}'
+        msg: '{{ __powershell_version_check.stdout }}'
 
     - name: 'AzureCLI version output'
       ansible.builtin.debug:
-        msg: '{{ _azurecli_version_check.stdout | from_json }}'
+        msg: '{{ __azurecli_version_check.stdout | from_json }}'
