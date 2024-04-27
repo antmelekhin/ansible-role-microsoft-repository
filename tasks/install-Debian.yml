@@ -8,14 +8,14 @@
           - 'apt-transport-https'
           - 'gnupg'
         update_cache: true
-        state: present
+        state: 'present'
+      when: not ansible_check_mode
 
     - name: 'Add Microsoft APT key'
       ansible.builtin.apt_key:
         url: '{{ microsoft_repository_gpgkey_url }}'
         keyring: '{{ _microsoft_repository_local_gpgkey_path }}'
         state: 'present'
-      when: not ansible_check_mode
 
     - name: 'Add Microsoft APT repository'
       ansible.builtin.template:
