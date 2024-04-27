@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.3.3](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.2...v1.3.3) (2024-04-27)
+
+
+### Documentation
+
+* **README:** fixed examples view for Ansible Galaxy ([e3a9099](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/e3a9099de2d08a53eb6684ce49dfe89b3eb36c48))
+
+
+### Fixes
+
+* fixed running a role in check_mode ([fd3a155](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/fd3a155671542e570048cbd4350c9ca9e44ec24a))
+
+
+### Styles
+
+* add newline to end of file ([24f476c](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/24f476c1dcb90470402127021cfd6a988a75980d))
+* use double underline register variable and quote strings ([9554d91](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/9554d91b12eb8f1873664744ace086b5eda3ceba))
+
+
+### Tests
+
+* add .tox as ignore ([0d60da4](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/0d60da46a5d91e84baa0d69088c0f786b45e1903))
+* add role_name prefix to instance name ([222ee5d](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/222ee5d8885f979d6da7a29acf4287323d50b0b7))
+* run linters in its own workflow ([853ffc5](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/853ffc5586d0fab6434ba5831dc1764700d2bdf4))
+
 ## [1.3.2](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.1...v1.3.2) (2024-04-19)
 
 
