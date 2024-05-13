@@ -1,7 +1,7 @@
 Microsoft Repository
 ====================
 
-An Ansible role to add `Microsoft` repository on Linux distros and install packages from it.
+An Ansible role that adds the [Microsoft repository](https://packages.microsoft.com) to Linux distributions and installs packages from it.
 
 Requirements
 ------------
@@ -23,15 +23,17 @@ Requirements
 Role Variables
 --------------
 
-- `microsoft_repository_mirror_url` Mirror of `Microsoft` repository (default: `https://packages.microsoft.com`).
-- `microsoft_repository_gpgkey_url` URL to `Microsoft's` GPG public key file (default: `https://packages.microsoft.com/keys/microsoft.asc`).
-- `microsoft_repository_dirs_list` List of repository directories. See [repository structure](https://packages.microsoft.com/).
+Variables used to add the Microsoft repository:
+
+- `microsoft_repository_mirror_url` Microsoft repository mirror (default: `https://packages.microsoft.com`).
+- `microsoft_repository_gpgkey_url` URL to Microsoft repository GPG key file (default: `https://packages.microsoft.com/keys/microsoft.asc`).
+- `microsoft_repository_dirs_list` A list of repository directories. See [repository structure](https://packages.microsoft.com/).
 
   Available values:
   - `name` prod (default)
   - `type` ommited by default (see the example with the 'azure-cli' install).
 
-- `microsoft_repository_packages` List of packages you want to install (default: `[]`).
+- `microsoft_repository_packages` A list of packages you want to install (default: `[]`).
 
 Dependencies
 ------------
