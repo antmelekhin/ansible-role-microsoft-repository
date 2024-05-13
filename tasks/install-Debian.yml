@@ -1,23 +1,24 @@
 ---
-- name: 'Configure APT repository and install Microsoft packages'
+- name: 'Debian | Configure the Microsoft repository and install packages from it'
   become: true
   block:
-    - name: 'Ensure dependencies are installed'
+    - name: 'Debian | Ensure dependencies are installed'
       ansible.builtin.apt:
         name:
           - 'apt-transport-https'
+          - 'ca-certificates'
           - 'gnupg'
         update_cache: true
         state: 'present'
       when: not ansible_check_mode
 
-    - name: 'Add Microsoft APT key'
+    - name: 'Debian | Add the Microsoft repository GPG key'
       ansible.builtin.apt_key:
         url: '{{ microsoft_repository_gpgkey_url }}'
         keyring: '{{ _microsoft_repository_local_gpgkey_path }}'
         state: 'present'
 
-    - name: 'Add Microsoft APT repository'
+    - name: 'Debian | Add the Microsoft repository'
       ansible.builtin.template:
         src: 'microsoft.list.j2'
         dest: '/etc/apt/sources.list.d/packages-microsoft-com.list'
@@ -25,6 +26,7 @@
         group: 'root'
         mode: 0644
 
+    - name: 'Debian | Install packages from the Microsoft repository'
     - name: 'Install Microsoft APT packages'
       ansible.builtin.apt:
         name: '{{ microsoft_repository_packages }}'

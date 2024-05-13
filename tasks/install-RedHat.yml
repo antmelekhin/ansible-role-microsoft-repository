@@ -1,13 +1,13 @@
 ---
-- name: 'Configure DNF/YUM repository and install Microsoft packages'
+- name: 'RedHat | Configure the Microsoft repository and install packages from it'
   become: true
   block:
-    - name: 'Ensure dependencies are installed'
+    - name: 'RedHat | Ensure dependencies are installed'
       ansible.builtin.package:
         name: 'yum-utils'
         state: 'present'
 
-    - name: 'Add Microsoft DNF/YUM repository'
+    - name: 'RedHat | Add the Microsoft repository'
       ansible.builtin.template:
         src: 'microsoft.repo.j2'
         dest: '/etc/yum.repos.d/packages-microsoft-com.repo'
@@ -15,7 +15,7 @@
         group: 'root'
         mode: 0644
 
-    - name: 'Install Microsoft DNF/YUM packages'
+    - name: 'RedHat | Install packages from the Microsoft repository'
       ansible.builtin.package:
         name: '{{ microsoft_repository_packages }}'
         state: 'present'
