@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.3.4](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.3...v1.3.4) (2024-05-13)
+
+
+### Documentation
+
+* **README:** update variables documentation ([8a9bc5b](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/8a9bc5b69cec33f154f95d3638c2305308ed4aa0))
+
+
+### Fixes
+
+* fix task and molecule instance names ([d52d156](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/d52d156a1852b4181f85a3012d60abf9b51997d8))
+
+
+### Styles
+
+* rename tasks ([6cf9a99](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/6cf9a99331135450c97d59646dac49f3edb098d0))
+
 ## [1.3.3](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.2...v1.3.3) (2024-04-27)
 
 
