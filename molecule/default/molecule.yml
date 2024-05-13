@@ -6,7 +6,7 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: 'microsoft-repository-${IMAGE:-docker-systemd}-${TAG:-ubuntu-22.04}${TOX_ENVNAME}'
+  - name: 'microsoft_repository-${IMAGE:-docker-systemd}-${TAG:-ubuntu-22.04}${TOX_ENVNAME}'
     image: '${NAMESPACE:-antmelekhin}/${IMAGE:-docker-systemd}:${TAG:-ubuntu-22.04}'
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw

@@ -27,7 +27,6 @@
         mode: 0644
 
     - name: 'Debian | Install packages from the Microsoft repository'
-    - name: 'Install Microsoft APT packages'
       ansible.builtin.apt:
         name: '{{ microsoft_repository_packages }}'
         update_cache: true
