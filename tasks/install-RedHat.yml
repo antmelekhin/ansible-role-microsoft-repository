@@ -2,7 +2,7 @@
 - name: 'RedHat | Configure the Microsoft repository and install packages from it'
   become: true
   block:
-    - name: 'RedHat | Ensure dependencies are installed'
+    - name: 'RedHat | Ensure the dependencies are installed'
       ansible.builtin.package:
         name: 'yum-utils'
         state: 'present'

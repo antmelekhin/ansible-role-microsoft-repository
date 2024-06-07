@@ -23,16 +23,11 @@ Requirements
 Role Variables
 --------------
 
-Variables used to add the Microsoft repository:
-
 - `microsoft_repository_mirror_url` Microsoft repository mirror (default: `https://packages.microsoft.com`).
 - `microsoft_repository_gpgkey_url` URL to Microsoft repository GPG key file (default: `https://packages.microsoft.com/keys/microsoft.asc`).
-- `microsoft_repository_dirs_list` A list of repository directories. See [repository structure](https://packages.microsoft.com/).
-
-  Available values:
+- `microsoft_repository_dirs_list` A list of repository directories. See [repository structure](https://packages.microsoft.com/). Available values are:
   - `name` prod (default)
   - `type` ommited by default (see the example with the 'azure-cli' install).
-
 - `microsoft_repository_packages` A list of packages you want to install (default: `[]`).
 
 Dependencies

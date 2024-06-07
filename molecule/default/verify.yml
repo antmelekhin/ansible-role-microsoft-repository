@@ -4,13 +4,13 @@
   gather_facts: false
 
   tasks:
-    - name: 'Check current Powershell version'
+    - name: 'Check the current Powershell version'
       ansible.builtin.command:
         cmd: 'pwsh --version'
       changed_when: false
       register: __powershell_version_check
 
-    - name: 'Check current AzureCLI version'
+    - name: 'Check the current AzureCLI version'
       ansible.builtin.command:
         cmd: 'az version'
       changed_when: false
