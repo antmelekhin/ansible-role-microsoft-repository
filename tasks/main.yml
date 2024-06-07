@@ -1,6 +1,6 @@
 ---
-- name: 'Include the Microsoft repository OS-specific variables'
+- name: 'Load the Microsoft repository OS-specific variables'
   ansible.builtin.include_vars: '{{ ansible_os_family }}.yml'
 
-- name: 'Include tasks to install Microsoft packages'
+- name: 'Install Microsoft packages'
   ansible.builtin.include_tasks: 'install-{{ ansible_os_family }}.yml'

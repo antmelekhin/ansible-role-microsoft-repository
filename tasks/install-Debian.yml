@@ -2,7 +2,7 @@
 - name: 'Debian | Configure the Microsoft repository and install packages from it'
   become: true
   block:
-    - name: 'Debian | Ensure dependencies are installed'
+    - name: 'Debian | Ensure the dependencies are installed'
       ansible.builtin.apt:
         name:
           - 'apt-transport-https'
