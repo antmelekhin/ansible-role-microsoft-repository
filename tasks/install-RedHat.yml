@@ -4,7 +4,9 @@
   block:
     - name: 'RedHat | Ensure the dependencies are installed'
       ansible.builtin.package:
-        name: 'yum-utils'
+        name:
+          - 'ca-certificates'
+          - 'yum-utils'
         state: 'present'
 
     - name: 'RedHat | Add the Microsoft repository'
@@ -19,4 +21,4 @@
       ansible.builtin.package:
         name: '{{ microsoft_repository_packages }}'
         state: 'present'
-      when: not ansible_check_mode
+      ignore_errors: '{{ ansible_check_mode }}'

@@ -9,13 +9,14 @@
           - 'ca-certificates'
           - 'gnupg'
         update_cache: true
+        cache_valid_time: 3600
         state: 'present'
-      when: not ansible_check_mode
+      check_mode: false
 
     - name: 'Debian | Add the Microsoft repository GPG key'
       ansible.builtin.apt_key:
         url: '{{ microsoft_repository_gpgkey_url }}'
-        keyring: '{{ _microsoft_repository_local_gpgkey_path }}'
+        keyring: '{{ __microsoft_repository_gpgkey_keyring }}'
         state: 'present'
 
     - name: 'Debian | Add the Microsoft repository'
@@ -31,4 +32,4 @@
         name: '{{ microsoft_repository_packages }}'
         update_cache: true
         state: 'present'
-      when: not ansible_check_mode
+      ignore_errors: '{{ ansible_check_mode }}'
