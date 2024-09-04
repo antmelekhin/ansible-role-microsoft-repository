@@ -6,7 +6,7 @@ An Ansible role that adds the [Microsoft repository](https://packages.microsoft.
 Requirements
 ------------
 
-- Supported version of Ansible: 2.9 and highter.
+- Supported version of Ansible: 2.12 and highter.
 - Supported platforms:
   - Debian
     - 10
