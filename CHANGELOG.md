@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.4...v1.4.0) (2024-09-04)
+
+
+### Improvements
+
+* merge OS-specific variables into the `vars/main.yml` file ([#17](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/17)) ([17a6f31](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/17a6f31e2b63166e1f31329f94696a95d87ca1a1))
+
+
+### Styles
+
+* update common role style ([#16](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/16)) ([b6a964d](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/b6a964df04e60955fe0b2326270c2e5c0c5fb1c6))
+
 ## [1.3.4](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.3...v1.3.4) (2024-05-13)
 
 
