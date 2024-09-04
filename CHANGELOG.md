@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.4.0...v1.5.0) (2024-09-04)
+
+
+### Features
+
+* add `meta/argument_specs.yml` file ([#18](https://github.com/antmelekhin/ansible-role-microsoft-repository/issues/18)) ([5665283](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/5665283482296cef068377a4c522143804fee083))
+
 ## [1.4.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.3.4...v1.4.0) (2024-09-04)
 
 
