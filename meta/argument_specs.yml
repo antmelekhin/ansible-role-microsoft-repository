@@ -1,0 +1,26 @@
+---
+argument_specs:
+  main:
+    short_description: 'Microsoft Repository'
+    description:
+      - 'An Ansible role that adds the L(Microsoft repository,https://packages.microsoft.com) to Linux distributions and installs packages from it.'
+    author:
+      - 'Melekhin Anton'
+    options:
+      microsoft_repository_mirror_url:
+        type: 'str'
+        description: 'The Microsoft repository mirror.'
+        default: 'https://packages.microsoft.com'
+      microsoft_repository_gpgkey_url:
+        type: 'str'
+        description:
+          - 'Specify where to fetch the Microsoft repository GPG key file from.'
+          - 'By default, the role uses the official Microsoft repository GPG key.'
+        default: '{{ microsoft_repository_mirror_url }}/keys/microsoft.asc'
+      microsoft_repository_dirs_list:
+        type: 'list'
+        elements: 'dict'
+        description: 'A list of repository directories.'
+      microsoft_repository_packages:
+        type: 'list'
+        description: 'A list of packages you want to install.'
