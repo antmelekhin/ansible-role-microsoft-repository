@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.5.0...v1.5.1) (2024-09-07)
+
+
+### Documentation
+
+* **README:** update variables description ([59e89c4](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/59e89c4fa331b4c30d860cee935ccd1a185c119f))
+
 ## [1.5.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.4.0...v1.5.0) (2024-09-04)
 
 
