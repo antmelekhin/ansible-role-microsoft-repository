@@ -23,12 +23,9 @@ Requirements
 Role Variables
 --------------
 
-- `microsoft_repository_mirror_url` Microsoft repository mirror (default: `https://packages.microsoft.com`).
-- `microsoft_repository_gpgkey_url` URL to Microsoft repository GPG key file (default: `https://packages.microsoft.com/keys/microsoft.asc`).
-- `microsoft_repository_dirs_list` A list of repository directories. See [repository structure](https://packages.microsoft.com/). Available values are:
-  - `name` prod (default)
-  - `type` ommited by default (see the example with the 'azure-cli' install).
-- `microsoft_repository_packages` A list of packages you want to install (default: `[]`).
+All variables that can be overridden are stored in the [defaults/main.yml](https://github.com/antmelekhin/ansible-role-microsoft-repository/blob/main/defaults/main.yml) file.
+Please refer to the [meta/argument_specs.yml](https://github.com/antmelekhin/ansible-role-microsoft-repository/blob/main/meta/argument_specs.yml) file for a description of the available variables.
+Similarly, descriptions and defaults for preset variables can be found in the [vars/main.yml](https://github.com/antmelekhin/ansible-role-microsoft-repository/blob/main/vars/main.yml) file.
 
 Dependencies
 ------------
