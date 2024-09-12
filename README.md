@@ -56,8 +56,8 @@ Add the `Microsoft Prod` repository and install `dotnet-sdk-3.1` and `powershell
   roles:
     - role: antmelekhin.microsoft_repository
       microsoft_repository_packages:
-        - dotnet-sdk-3.1
-        - powershell
+        - 'dotnet-sdk-3.1'
+        - 'powershell'
 ```
 
 Add the `Microsoft Azure CLI` repository and install the azure-cli package:
@@ -69,11 +69,10 @@ Add the `Microsoft Azure CLI` repository and install the azure-cli package:
 
   roles:
     - role: antmelekhin.microsoft_repository
-      microsoft_repository_dirs_list:
-        - name: azure-cli
-          type: alternative
+      microsoft_repository_additional_directories:
+        - 'azure-cli'
       microsoft_repository_packages:
-        - azure-cli
+        - 'azure-cli'
 ```
 
 License
