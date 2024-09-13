@@ -1,8 +1,6 @@
 ---
 microsoft_repository_mirror_url: 'https://packages.microsoft.com'
 microsoft_repository_gpgkey_url: '{{ microsoft_repository_mirror_url }}/keys/microsoft.asc'
-
-microsoft_repository_dirs_list:
-  - name: 'prod'
-
+microsoft_repository_enable_prod_repository: true
+microsoft_repository_additional_directories: []
 microsoft_repository_packages: []

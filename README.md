@@ -3,6 +3,11 @@ Microsoft Repository
 
 An Ansible role that adds the [Microsoft repository](https://packages.microsoft.com) to Linux distributions and installs packages from it.
 
+Upgrade to 2.x
+--------------
+
+Since version 2.0.0, the variable `microsoft_repository_dirs_list` has changed to `microsoft_repository_enable_prod_repository` and `microsoft_repository_additional_directories`.
+
 Requirements
 ------------
 
@@ -56,8 +61,8 @@ Add the `Microsoft Prod` repository and install `dotnet-sdk-3.1` and `powershell
   roles:
     - role: antmelekhin.microsoft_repository
       microsoft_repository_packages:
-        - dotnet-sdk-3.1
-        - powershell
+        - 'dotnet-sdk-3.1'
+        - 'powershell'
 ```
 
 Add the `Microsoft Azure CLI` repository and install the azure-cli package:
@@ -69,11 +74,10 @@ Add the `Microsoft Azure CLI` repository and install the azure-cli package:
 
   roles:
     - role: antmelekhin.microsoft_repository
-      microsoft_repository_dirs_list:
-        - name: azure-cli
-          type: alternative
+      microsoft_repository_additional_directories:
+        - 'azure-cli'
       microsoft_repository_packages:
-        - azure-cli
+        - 'azure-cli'
 ```
 
 License
