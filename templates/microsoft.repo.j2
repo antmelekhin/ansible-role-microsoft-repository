@@ -1,6 +1,6 @@
 {{ ansible_managed | comment }}
 
-{% if microsoft_repository_prod_repository | bool %}
+{% if microsoft_repository_enable_prod_repository | bool %}
 [packages-microsoft-com-prod]
 name = packages-microsoft-com-prod
 baseurl = {{ __microsoft_repository_prod_repository }}

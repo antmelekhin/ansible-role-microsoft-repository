@@ -17,7 +17,7 @@ argument_specs:
           - 'Specify where to fetch the Microsoft repository GPG key file from.'
           - 'By default, the role uses the official Microsoft repository GPG key.'
         default: '{{ microsoft_repository_mirror_url }}/keys/microsoft.asc'
-      microsoft_repository_prod_repository:
+      microsoft_repository_enable_prod_repository:
         type: 'bool'
         description: 'Specifies whether prod repository is enabled.'
         default: true

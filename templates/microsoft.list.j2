@@ -1,6 +1,6 @@
 {{ ansible_managed | comment }}
 
-{% if microsoft_repository_prod_repository | bool %}
+{% if microsoft_repository_enable_prod_repository | bool %}
 deb [arch=amd64,arm64,armhf signed-by={{ __microsoft_repository_gpgkey_keyring }}] {{ __microsoft_repository_prod_repository }}
 {% endif %}
 {% for microsoft_repository_additional_directory in microsoft_repository_additional_directories %}
