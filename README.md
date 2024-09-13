@@ -3,6 +3,11 @@ Microsoft Repository
 
 An Ansible role that adds the [Microsoft repository](https://packages.microsoft.com) to Linux distributions and installs packages from it.
 
+Upgrade to 2.x
+--------------
+
+Since version 2.0.0, the variable `microsoft_repository_dirs_list` has changed to `microsoft_repository_enable_prod_repository` and `microsoft_repository_additional_directories`.
+
 Requirements
 ------------
 
