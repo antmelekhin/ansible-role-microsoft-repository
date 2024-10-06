@@ -4,8 +4,7 @@ argument_specs:
     short_description: 'Microsoft Repository'
     description:
       - 'An Ansible role that adds the L(Microsoft repository,https://packages.microsoft.com) to Linux distributions and installs packages from it.'
-    author:
-      - 'Melekhin Anton'
+    author: 'Melekhin Anton'
     options:
       microsoft_repository_mirror_url:
         type: 'str'
