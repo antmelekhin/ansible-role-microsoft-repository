@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v2.0.0...v2.0.1) (2024-12-07)
+
+
+### Documentation
+
+* **README:** updated requirements ([7c9e891](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/7c9e89172474102bc52aaca56f8b4addde0df503))
+
 ## [2.0.0](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v1.5.1...v2.0.0) (2024-09-13)
 
 
