@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v2.0.1...v2.0.2) (2026-04-27)
+
+
+### Fixes
+
+* use newer style ansible facts ([afb62d9](https://github.com/antmelekhin/ansible-role-microsoft-repository/commit/afb62d9d15b4d884e38c30c4651395c5f5afba5a))
+
 ## [2.0.1](https://github.com/antmelekhin/ansible-role-microsoft-repository/compare/v2.0.0...v2.0.1) (2024-12-07)
 
 
