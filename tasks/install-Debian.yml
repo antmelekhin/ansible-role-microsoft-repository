@@ -25,7 +25,7 @@
         dest: '/etc/apt/sources.list.d/packages-microsoft-com.list'
         owner: 'root'
         group: 'root'
-        mode: 0644
+        mode: '0644'
 
     - name: 'Debian | Install packages from the Microsoft repository'
       ansible.builtin.apt:

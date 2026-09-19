@@ -15,7 +15,7 @@
         dest: '/etc/yum.repos.d/packages-microsoft-com.repo'
         owner: 'root'
         group: 'root'
-        mode: 0644
+        mode: '0644'
 
     - name: 'RedHat | Install packages from the Microsoft repository'
       ansible.builtin.package:
